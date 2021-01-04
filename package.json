@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "init-project": "npm install && npm-run-all init:*",
-    "init:dirs": "mkdirp css scss vendor js images",
+    "init:dirs": "mkdirp css sass vendor js images",
     "init:files": "touch index.html scss/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm-run-all test:*",
