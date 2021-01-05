@@ -1,0 +1,236 @@
+//Variables
+
+$font-main: sans-serif;
+
+$color-light: white;
+$color-dark: black;
+$color-gold: #fed136;
+
+/*Global*/
+
+body *, 
+body *::after, 
+body *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-main;
+    
+    font-size: 16px;
+    line-height: 1.7;
+    //background: orange;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100%;
+    width: 85%;
+    
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    background-size: 300%;
+    background-position: 0 0;
+    transition: color 1s, background-position 1s;
+    color: $color-light;
+    margin: 0;
+    padding: 20px 60px;
+    font-weight: 600;
+    font-size: 16px;   
+}
+
+section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    color: $color-dark;
+}
+
+.section-header {
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 1;
+    margin: 0;
+}
+
+.section-subheader {
+    font-size: inherit;
+    font-weight: inherit;
+    margin-top: 60px;
+    position: relative;
+}
+
+/*Navigation*/
+
+.navigation {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    color: $color-light;
+    z-index: 2;
+}
+
+.menu {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+
+    & a {
+        text-decoration: none;
+        display: block;
+        padding: 8px 0;
+        text-align: center;
+        min-width: max-content; 
+        font-size: 14px;       
+    }
+    
+    & li {
+        min-width: max-content;
+        width: 9vw;
+    }
+
+    & > li {
+        display: inline-block;
+        position: relative;      
+
+        & > a {
+            color: $color-light;            
+            font-weight: 600;            
+            text-transform: uppercase;                  
+        }
+
+        &:hover {
+            background: linear-gradient(transparent, rgba($color-light, 0.2));
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+
+            & > a {
+                font-weight: 800;
+                text-shadow: 2px 0px 20px black; 
+            }
+        }
+
+        & > a:hover {
+            background: linear-gradient(transparent, rgba($color-light, 0.5));
+        }
+
+    
+        &:hover .dropped-menu {            
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+.dropped-menu {    
+    list-style-type: none;
+    padding: 0px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;    
+
+    & li { 
+        background: rgba($color-light, 0.2);
+        border-bottom: rgba($color-dark, 0.4) solid 1px;       
+        
+        &:first-child {            
+            margin-top: 1px;
+        }
+
+        &:last-child {
+            border-bottom: transparent;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        &:hover{
+            background: rgba($color-light, 0.5);
+        }
+    }
+
+    & a {
+        color: $color-light;
+        text-shadow: 2px 0px 20px black;
+
+        &:hover {
+            font-weight: 700;
+            color: $color-dark;    
+            text-shadow: 2px 0px 20px white;    
+        }
+    }    
+}
+
+/*Splash*/
+
+.splash {  
+    //position: relative;  
+    height: 100vh; 
+    //background-color: $color-dark;  
+    background-image: url("../images/splash.jpg");    
+    background-position: center;
+    background-size: cover;
+    color: $color-light;
+    
+
+    .splash-header {
+        text-transform: uppercase;
+        font-size: 70px;
+        font-weight: 1000;
+        line-height: 1;
+        margin: 0 0 28px 0;
+        z-index: 2;
+    }
+    
+    .splash-up-header {
+        font-size: 32px;
+        font-weight: 500;
+        font-style: italic;
+        margin: 48px 0 28px 0;
+        z-index: 2;
+    
+    }
+}
+//
+.splash::before {
+    position: absolute;
+    content: "";
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-dark, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+.splash-wrapper {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-one {
+    color: $color-light;
+    text-transform: uppercase;
+    background-image: linear-gradient(90deg, $color-gold 50%, $color-light 50%);
+    z-index: 2;
+     
+    &:hover {
+        color: $color-dark;
+        background-position: 100% 0;
+    }
+}
