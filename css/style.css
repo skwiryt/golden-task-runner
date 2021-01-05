@@ -44,24 +44,33 @@ body {
 }
 
 section {
-  padding-top: 90px;
+  padding-top: 110px;
   padding-bottom: 90px;
   text-align: center;
   color: black;
 }
 
 .section-header {
-  font-size: 64px;
-  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
   line-height: 1;
   margin: 0;
 }
 
 .section-subheader {
-  font-size: inherit;
+  font-size: 16;
   font-weight: inherit;
-  margin-top: 60px;
+  margin-top: 10px;
+  margin-bottom: 70px;
   position: relative;
+  font-style: italic;
+  font-family: serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.item-title {
+  margin-bottom: 0;
 }
 
 /*Navigation*/
@@ -226,4 +235,106 @@ section {
 .btn-one:hover {
   color: black;
   background-position: 100% 0;
+}
+
+/*Services*/
+.services p {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: serif;
+}
+
+.icon {
+  border: solid 3px #fed136;
+  border-radius: 50%;
+  padding: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+}
+
+/*Portfolio*/
+.portfolio {
+  background: #f7f7f7;
+}
+
+.portfolio p {
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  font-family: serif;
+}
+
+.portfolio .portfolio-item {
+  background-color: white;
+  padding-bottom: 5px;
+  margin: 0 5px 55px 5px;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/*Footer*/
+.page-footer {
+  position: relative;
+}
+
+.copyright {
+  position: absolute;
+  top: 26px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.page-footer ul {
+  margin: 48px auto;
+  list-style-type: none;
+  width: 30%;
+  min-width: 300px;
+  text-align: center;
+}
+
+.page-footer ul li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 0px;
+  position: relative;
+}
+
+.page-footer ul li i {
+  width: 45px;
+  height: 45px;
+  padding: 8px 0 0 0;
+  background: black;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  transition: all 0.5s;
+}
+
+.page-footer ul li i:hover {
+  transform: scale(1.2);
+}
+
+.page-footer ul li i.google {
+  padding: 0 0 18px 0;
+  position: absolute;
+  top: -23px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }
